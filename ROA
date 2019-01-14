@@ -1,0 +1,171 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projeto_gft_restaurant_order_app;
+
+
+import java.util.Calendar;
+import java.util.Scanner;
+/**
+ *
+ * @author Yonatan
+ */
+public class Projeto_GFT_Restaurant_Order_App {
+
+    /**
+     * @param args the command line arguments
+     */
+  
+    
+    public static void main(String[] args) { 
+     // TODO code application logic here
+     
+     
+     
+     //taking value as command line argument.
+        Scanner in = new Scanner(System.in); 
+        int escolha, entrada, acompanhamento , bebida ,sobremesa;
+        
+        Calendar rightNow = Calendar.getInstance();
+        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+    for (int i = 0; i < 100; ++i){
+    System.out.println ();}
+      System.out.println("%%%%%%%%%%%% Bem vindo ao ROA %%%%%%%%%%%%");
+      
+      if (hour <=12 ){System.out.print("Bom dia");}
+      if (hour >=13 && hour <=18 ){System.out.print("Bom tarde");}
+      if (hour >=19 ){System.out.println("Boa noite");}
+    
+      
+      System.out.println("Seu pedido é para , Manhã ou Noite ? ");
+        System.out.println("Para manhã digite 1 ou para noite digite 2 :");    
+          do{
+                escolha = in.nextInt();
+                 if (escolha >= 1 && escolha <= 2 ) {
+                   break;
+                 } else {
+                    System.out.println("Solicitação invalida ");
+                    System.out.println("Por Favor digite 1 o para periodo da manhã ou 2 para o periodo da noite");
+                         }
+                 } while(true);  
+
+            if(escolha == 1 ){
+
+                System.out.println("Manhã, Opções disponiveis :");
+                System.out.println("");
+
+                System.out.println("Prato de entrada : Ovo (1 por pessoa )");
+                System.out.println("Quantide de entradas ?");    
+               do{
+                 entrada = in.nextInt();
+                  if (entrada <= 1 ) {
+                    break;
+                  } else {
+                     System.out.println("Solicitação invalida para o período");
+                     System.out.println("Por Favor ,informe novamente a entrada:");
+                          }
+                  } while(true); 
+
+               if(escolha == 1){
+                System.out.println("Prato de acompanhamento : Torrada - (1 por pessoa ) ");
+                System.out.println("Quantida de Acompanhamentos ?");  
+                do{
+                acompanhamento = in.nextInt();
+                  if (acompanhamento <= 1 ) {
+                    break;
+                  } else {
+                     System.out.println("Solicitação invalida para o período");
+                     System.out.println("Por Favor ,informe novamente a acompanhamento:");
+                          }
+                  } while(true);  
+
+                System.out.println("Bebida : Café - ilimitado "); 
+                System.out.println("Quantida de Bebidas ?  "); 
+                 do{
+                 bebida = in.nextInt();
+                  if (bebida >= 0 ) {
+                    break;
+                  } else {
+                     System.out.println("Solicitação invalida para o período");
+                     System.out.println("Por Favor ,informe novamente a acompanhamento:");
+                          }
+                  } while(true);
+
+                System.out.println("Sobremesa : Indisponivel nesse período - 0 "); 
+                System.out.println("Quantidade de Sobremesas ? ");
+                  do{
+                 sobremesa = in.nextInt();
+                  if (sobremesa == 0) {
+                    break;
+                  } else {
+                     System.out.println("Solicitação invalida para o período");
+                     System.out.println("Por Favor ,informe novamente a acompanhamento:");
+                          }
+                  } while(true);
+
+                System.out.println(" Seu pedido é  : "+entrada+" -Ovos(s) /=/ "+acompanhamento+" -Torradas(s) /=/ "+bebida+" -Café(s) /=/ "+sobremesa+" -Sobremesa(s)"); 
+                System.out.println(""); 
+                
+                }
+            }
+
+          if(escolha == 2){
+            System.out.println("Noite, Opções disponiveis :");
+            System.out.println("");
+
+            System.out.println("Prato de entrada : bife (1 por pessoa )");
+            System.out.println("Quantide entradas ?");    
+           do{
+             entrada = in.nextInt();
+              if (entrada <= 1 ) {
+                break;
+              } else {
+                 System.out.println("Solicitação invalida para o período");
+                 System.out.println("Por Favor ,informe novamente a entrada:");
+                      }
+              } while(true);  
+
+            System.out.println("Prato de acompanhamento : Batata ) - ilimitado ");
+            System.out.println("Quantidade Acompanhamentos ?");  
+            do{
+            acompanhamento = in.nextInt();
+              if (acompanhamento >= 0 ) {
+                break;
+              } else {
+                 System.out.println("Solicitação invalida para o período");
+                 System.out.println("Por Favor ,informe novamente a acompanhamento:");
+                      }
+              } while(true);  
+
+            System.out.println("Bebida : Vinho - (1 por pessoa )"); 
+            System.out.println("Quantidade Bebidas ?  "); 
+             do{
+             bebida = in.nextInt();
+              if (bebida <= 1 ) {
+                break;
+              } else {
+                 System.out.println("Solicitação invalida para o período");
+                 System.out.println("Por Favor ,informe novamente a bebida:");
+                      }
+              } while(true);
+
+            System.out.println("Sobremesa : bolo - (1 por pessoa )"); 
+            System.out.println("Quantidade de Sobremesas ? ");
+              do{
+             sobremesa = in.nextInt();
+              if (sobremesa >= 0) {
+                break;
+              } else {
+                 System.out.println("Solicitação invalida para o período");
+                 System.out.println("Por Favor ,informe novamente a sobremesa:");
+                      }
+              } while(true);
+
+            System.out.println(" Seu pedido é  : "+entrada+" -Bife(s) "+acompanhamento+" -Batatas(s) "+bebida+" -Vinho(s) "+sobremesa+" -Sobremesa(s)"); 
+            System.out.println("");
+          }   
+          
+       }
+    }
